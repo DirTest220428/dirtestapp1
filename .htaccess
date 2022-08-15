@@ -24,6 +24,12 @@ DirectoryIndex index.php index.html .ht
     # XSS対策
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Content-Type-Options nosniff
+    
+    # CORSエラー対策
+   Header add Access-Control-Allow-Origin "*"
+   Header add Access-Control-Allow-Headers "*"
+   Header add Access-Control-Allow-Methods "OPTIONS, GET, POST, PUT, DELETE"
+   Header add Access-Control-Max-Age 86400
 </IfModule>
 
 # デザインテンプレートを適用するため10Mで設定 
