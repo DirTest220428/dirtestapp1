@@ -1,0 +1,8 @@
+{{ config(materialized='table') }}
+
+SELECT
+  fa.*
+FROM
+  test_t_yasuda.TEST_2405_ACCOUNT fa
+WHERE
+  fa.nintendoAccountId = '1abcdef'
